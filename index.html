@@ -1,12 +1,62 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="./src/assets/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio</title>
+
+    <title>Portfolio - Victor</title>
+
+    <style>
+      .initial-splash {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(135deg, #20C7D3 0%, #0E767D 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        font-family: "Geist", sans-serif;
+      }
+
+      .initial-splash-content {
+        text-align: center;
+        color: white;
+      }
+
+      .initial-splash h1 {
+        font-size: clamp(2rem, 5vw, 4rem);
+        font-weight: 200;
+        margin: 0;
+      }
+
+      .initial-splash p {
+        font-size: 1.2rem;
+        font-weight: 300;
+        opacity: 0.9;
+      }
+
+      .initial-splash-hidden {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+      }
+    </style>
   </head>
   <body>
+  <div id="initial-splash" class="initial-splash">
+    <div class="initial-splash-content">
+      <h1>Victor Santos - Developer</h1>
+      <p>Preparando...</p>
+    </div>
+  </div>
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
